@@ -3,6 +3,7 @@ import Swal from "sweetalert2";
 import { savedDonatedList } from "../../Utilities/LocalStorage";
 import "./Details.css";
 import Header from "../Shared/Header/Header";
+import { Helmet } from "react-helmet-async";
 
 const Details = () => {
   const navigate=useNavigate()
@@ -30,6 +31,9 @@ const Details = () => {
 
   return (
     <div>
+       <Helmet>
+        <title>Donated Details: {id}</title>
+      </Helmet>
       <div>
       <Header></Header>
       </div>

@@ -3,6 +3,7 @@ import { Chart } from "react-google-charts";
 import { useLoaderData } from "react-router";
 import { getLocalStorageData } from "../../Utilities/LocalStorage";
 import Header from "../Shared/Header/Header";
+import { Helmet } from "react-helmet-async";
 
 const Statistics = () => {
   const allDonation = useLoaderData();
@@ -31,6 +32,9 @@ const Statistics = () => {
 
   return (
     <div>
+       <Helmet>
+        <title>Statistics</title>
+      </Helmet>
       <Header></Header>
       <div>
       <Chart

@@ -3,6 +3,7 @@ import Donation from "../Campaign/Donation";
 import { useNavigate } from "react-router";
 import Cover from "../Cover/Cover";
 import Header from "../Shared/Header/Header";
+import { Helmet } from "react-helmet-async";
 
 const Home = () => {
   const [donations, setDonations] = useState([]);
@@ -37,6 +38,9 @@ const Home = () => {
 
   return (
     <div>
+      <Helmet>
+        <title>Donation Campaign</title>
+      </Helmet>
       <div>
         <div className="relative">
           <div className="">

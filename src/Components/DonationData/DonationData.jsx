@@ -4,6 +4,7 @@ import { useLoaderData } from "react-router-dom";
 import { getLocalStorageData } from "../../Utilities/LocalStorage";
 import DonatedDetails from "./DonatedDetails";
 import Header from "../Shared/Header/Header";
+import { Helmet } from "react-helmet-async";
 
 const DonationData = () => {
   const allDonation = useLoaderData();
@@ -31,6 +32,9 @@ const DonationData = () => {
 
   return (
     <div>
+       <Helmet>
+        <title>Donated List</title>
+      </Helmet>
       <Header></Header>
       <div>
       <div className=" grid px-5 md:px-0 lg:px-0 grid-cols-1 md:grid-cols-2 max-w-7xl mx-auto my-8 gap-8">
